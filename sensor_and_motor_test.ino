@@ -45,13 +45,13 @@ void loop() {
 int get_sensor_value(int pin)
 {
   int count = 0;
-  int average = 0;
+  int sum = 0;
   while (count <= 5)
   {
-    average += analogRead(pin);
+    sum += analogRead(pin);
     count++;
   }
-  return average / count;
+  return sum / count;
 }
 
 
